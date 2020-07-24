@@ -1,6 +1,6 @@
 ---
 title: vector 클래스
-description: 클래스 벡터의 C++ Microsoft 표준 라이브러리 구현에 대 한 참조입니다.
+description: 클래스 벡터의 C++ Microsoft 표준 라이브러리 구현에 대한 참조입니다.
 ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
@@ -115,13 +115,13 @@ class vector
 
 ## <a name="remarks"></a>설명
 
-벡터를 사용하면 시퀀스 끝에서 상수 시간 삽입 및 삭제할 수 있습니다. 벡터 중간에 요소를 삽입하거나 삭제하려면 선형 시간이 필요합니다. [Deque 클래스](../standard-library/deque-class.md) 컨테이너는 시퀀스의 시작과 끝에서 삽입 하 고 삭제 하는 속도 보다 빠릅니다. [목록 클래스](../standard-library/list-class.md) 컨테이너는 시퀀스 내의 모든 위치에서 삽입 하 고 삭제 하는 속도 보다 빠릅니다.
+벡터를 사용하면 시퀀스 끝에서 상수 시간에 삽입 및 삭제할 수 있습니다. 벡터 중간에 요소를 삽입하거나 삭제하려면 선형 시간이 필요합니다. [Deque 클래스](../standard-library/deque-class.md) 컨테이너는 시퀀스의 시작과 끝에서 삽입하고 삭제하는 속도가 더 빠릅니다. [list 클래스](../standard-library/list-class.md) 컨테이너는 시퀀스 내의 모든 위치에서 삽입하고 삭제하는 속도가 더 빠릅니다.
 
 멤버 함수가 벡터 개체에 포함되는 시퀀스를 현재 스토리지 용량보다 더 크게 늘려야 할 때 벡터 다시 할당이 수행됩니다. 다른 삽입 및 지우기에서 시퀀스 내의 여러 스토리지 주소가 변경될 수 있습니다. 이러한 모든 경우 시퀀스의 변경되는 부분을 가리키는 반복기 또는 참조가 올바르지 않은 상태가 됩니다. 재할당이 수행되지 않으면 삽입/삭제 지점 앞의 반복기와 참조만 올바른 상태로 유지됩니다.
 
 [Vector\<bool > 클래스](../standard-library/vector-bool-class.md) 는 `bool`형식의 요소에 대한 클래스 템플릿 벡터의 전체 특수화입니다. 특수화에 사용 되는 기본 형식에 대 한 할당자를 포함 합니다.
 
-[Vector\<bool > reference 클래스](../standard-library/vector-bool-class.md#reference_class) 는 개체가 vector\<bool > 개체 내의 요소 (단일 비트)에 대 한 참조를 제공할 수 있는 중첩 클래스입니다.
+[Vector\<bool > reference 클래스](../standard-library/vector-bool-class.md#reference_class) 는 개체가 vector\<bool > 개체 내의 요소 (단일 비트)에 대한 참조를 제공할 수 있는 중첩 클래스입니다.
 
 ## <a name="members"></a>구성원
 
@@ -138,7 +138,7 @@ class vector
 |[allocator_type](#allocator_type)|벡터 개체의 `allocator` 클래스를 나타내는 형식입니다.|
 |[const_iterator](#const_iterator)|벡터에 있는 **const** 요소를 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.|
 |[const_pointer](#const_pointer)|벡터의 **const** 요소에 대한 포인터를 제공하는 형식입니다.|
-|[const_reference](#const_reference)|벡터에 저장 된 **const** 요소에 대 한 참조를 제공하는 형식입니다. **Const** 작업을 읽고 수행 하는 데 사용 됩니다.|
+|[const_reference](#const_reference)|벡터에 저장 된 **const** 요소에 대한 참조를 제공하는 형식입니다. **Const** 작업을 읽고 수행하는 데 사용 됩니다.|
 |[const_reverse_iterator](#const_reverse_iterator)|벡터의 모든 **const** 요소를 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.|
 |[difference_type](#difference_type)|벡터 내 두 요소 주소 간의 차이를 제공하는 형식입니다.|
 |[iterator](#iterator)|벡터에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다.|
@@ -203,7 +203,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>예제
 
-[을 사용하는 예제는 ](#get_allocator)get_allocator`allocator_type`의 예제를 참조하세요.
+`allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)를 참조하세요.
 
 ## <a name="assign"></a>할당
 
@@ -1380,7 +1380,7 @@ int main( )
 
 ## <a name="op_at"></a> operator[]
 
-지정된 위치에서 벡터 요소에 참조를 반환합니다.
+지정된 위치에서 벡터 요소에 대한 참조를 반환합니다.
 
 ```cpp
 reference operator[](size_type position);
