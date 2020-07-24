@@ -205,7 +205,7 @@ typedef Allocator allocator_type;
 
 [을 사용하는 예제는 ](#get_allocator)get_allocator`allocator_type`의 예제를 참조하세요.
 
-## <a name="assign"></a>할당
+## <a name="assign"></a>assign
 
 벡터를 지우고 지정된 요소를 빈 벡터에 복사합니다.
 
@@ -236,7 +236,7 @@ void assign(InputIterator first, InputIterator last);
 
 ### <a name="remarks"></a>설명
 
-먼저 `assign` vector에서 기존 요소를 모두 지웁니다. 그런 다음 원래 vector의 지정 된 요소 범위를 벡터에 삽입 하거나 지정 된 새 값 요소의 복사본을 벡터에 삽입 `assign` 합니다.
+먼저 `assign`은 vector에서 기존 요소를 모두 지웁니다. 그런 다음 `assign`은 원래 vector의 지정된 요소 범위를 벡터에 삽입 하거나 지정 된 새 값 요소의 복사본을 벡터에 삽입합니다.
 
 ### <a name="example"></a>예제
 
@@ -285,7 +285,7 @@ int main()
 }
 ```
 
-## <a name="at"></a>속도
+## <a name="at"></a>at
 
 벡터의 지정된 위치에 있는 요소에 대한 참조를 반환합니다.
 
@@ -297,7 +297,7 @@ const_reference at(size_type position) const;
 
 ### <a name="parameters"></a>매개 변수
 
-*위치*\
+*position*\
 벡터에서 참조할 요소의 아래 첨자 또는 위치 번호입니다.
 
 ### <a name="return-value"></a>Return Value
@@ -336,7 +336,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a>뒤로
+## <a name="back"></a>back
 
 벡터의 마지막 요소에 대한 참조를 반환합니다.
 
@@ -380,7 +380,7 @@ int main() {
 }
 ```
 
-## <a name="begin"></a>시작
+## <a name="begin"></a>begin
 
 벡터의 첫 번째 요소에 대한 임의 액세스 반복기를 반환합니다.
 
@@ -443,7 +443,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="capacity"></a>수용
+## <a name="capacity"></a>capacity
 
 스토리지를 더 할당하지 않고 벡터가 포함할 수 있는 요소의 수를 반환합니다.
 
@@ -457,7 +457,7 @@ size_type capacity() const;
 
 ### <a name="remarks"></a>설명
 
-[resize](#resize) 구성원 함수를 포함할 수 있도록 충분한 메모리를 할당하면 해당 함수의 효율성이 높아집니다. 할당되는 메모리의 양을 지정하려면 [reserve](#reserve) 구성원 함수를 사용합니다.
+충분한 메모리가 할당되어 있으면 [resize](#resize) 멤버 함수가 더 효율적입니다. 할당되는 메모리의 양을 지정하려면 [reserve](#reserve) 멤버 함수를 사용합니다.
 
 ### <a name="example"></a>예제
 
@@ -503,7 +503,7 @@ const_iterator cbegin() const;
 
 `cbegin`의 반환 값을 사용 하 여 범위의 요소를 수정할 수 없습니다.
 
-`begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `begin()` 및 `cbegin()`를 지 원하는 모든 종류의 수정 가능 (비 **const**) 컨테이너로 `Container` 하는 것이 좋습니다.
+`begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`를 `begin()` 및 `cbegin()`를 지원하는 모든 종류의 수정 가능한 (비 **const**) 컨테이너라고 가정합니다.
 
 ```cpp
 auto i1 = Container.begin();
@@ -529,7 +529,7 @@ const_iterator cend() const;
 
 `cend`는 반복기가 범위 끝을 통과했는지 여부를 테스트하는 데 사용됩니다.
 
-`end()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `end()` 및 `cend()`를 지 원하는 모든 종류의 수정 가능 (비 **const**) 컨테이너로 `Container` 하는 것이 좋습니다.
+`end()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `Container`를 `begin()` 및 `cbegin()`를 지원하는 모든 종류의 수정 가능한 (비 **const**) 컨테이너라고 가정합니다.
 
 ```cpp
 auto i1 = Container.end();
@@ -541,7 +541,7 @@ auto i2 = Container.cend();
 
 `cend`에서 반환 된 값은 역참조 되지 않아야 합니다. 비교에만 사용 합니다.
 
-## <a name="clear"></a>해제
+## <a name="clear"></a>clear
 
 벡터의 요소를 지웁니다.
 
@@ -587,11 +587,11 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>설명
 
-`const_iterator` 형식은 요소의 값을 수정 하는 데 사용할 수 없습니다.
+`const_iterator` 형식은 요소의 값을 수정하는 데 사용할 수 없습니다.
 
 ### <a name="example"></a>예제
 
-[를 사용하는 예제는 ](#back)back`const_iterator`의 예제를 참조하세요.
+`const_iterator`를 사용하는 예제는 [back](#back)의 예제를 참조하세요.
 
 ## <a name="const_pointer"></a>const_pointer
 
@@ -603,13 +603,13 @@ typedef typename Allocator::const_pointer const_pointer;
 
 ### <a name="remarks"></a>설명
 
-`const_pointer` 형식은 요소의 값을 수정 하는 데 사용할 수 없습니다.
+`const_pointer` 형식은 요소의 값을 수정하는 데 사용할 수 없습니다.
 
 [iterator](#iterator)는 벡터 요소에 액세스하는 데 사용되는 경우가 더 많습니다.
 
 ## <a name="const_reference"></a>const_reference
 
-벡터에 저장 된 **const** 요소에 대 한 참조를 제공 하는 형식입니다. **Const** 작업을 읽고 수행 하는 데 사용 됩니다.
+벡터에 저장 된 **const** 요소에 대 한 참조를 제공 하는 형식입니다. **Const** 작업을 읽고 수행하는 데 사용 됩니다.
 
 ```cpp
 typedef typename Allocator::const_reference const_reference;
@@ -730,9 +730,9 @@ const_reverse_iterator crend() const;
 
 ### <a name="remarks"></a>설명
 
-`crend`는 `vector`vector::cend[가 ](#cend)에 사용되는 것처럼 역방향 `vector`에 사용됩니다.
+`crend`는 [vector::cend](#cend)가 `vector`에 사용되는 것처럼 역방향 `vector`에 사용됩니다.
 
-`crend` (적절 하 게 감소)의 반환 값을 사용 하 여 `vector` 개체를 수정할 수 없습니다.
+`crend` (적절하게 감소)의 반환 값을 사용하여 `vector` 개체를 수정할 수 없습니다.
 
 `crend`를 사용하여 역방향 반복기가 `vector` 끝에 도달했는지 여부를 테스트할 수 있습니다.
 
