@@ -40,7 +40,7 @@ template <class T> void as_const(const T&&) = delete;
 template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
 ```
 
-## <a name="exchange"></a><a name="exchange"></a>교환의
+## <a name="exchange"></a><a name="exchange"></a>exchange
 
 **(C++14)** 개체에 새 값을 할당하고 이전 값을 반환합니다.
 
@@ -95,7 +95,7 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a><a name="forward"></a>전환
+## <a name="forward"></a><a name="forward"></a>forward
 
 인수가 rvalue 또는 rvalue 참조인 경우 rvalue 참조에 대한 해당 인수를 조건적으로 캐스팅합니다. 그러면 인수의 rvalue 특성이 전달 함수로 복원되어 완벽하게 전달됩니다.
 
@@ -313,7 +313,7 @@ template <class T, class U>
 
 도우미 함수 `make_pair`를 사용하여 쌍을 선언하고 초기화하는 방법을 알아보려면 [pair 구조체](../standard-library/pair-structure.md)를 참조하세요.
 
-## <a name="move"></a><a name="move"></a>옮기고
+## <a name="move"></a><a name="move"></a>move
 
 무조건 인수를 rvalue 참조로 캐스트합니다. 따라서 형식이 이동 가능할 경우 이동 가능하다는 신호를 줍니다.
 
@@ -348,7 +348,7 @@ template <class Type>
 template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a>swap
 
 두 개의 형식 또는 [쌍 구조](../standard-library/pair-structure.md) 개체의 요소를 교환 합니다.
 
