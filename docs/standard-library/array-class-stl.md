@@ -701,7 +701,7 @@ int main( )
 1
 ```
 
-## <a name="arraydata"></a><a name="data"></a>배열::d ata
+## <a name="arraydata"></a><a name="data"></a>배열::data
 
 첫 번째 요소의 주소를 가져옵니다.
 
@@ -747,7 +747,7 @@ int main()
 0
 ```
 
-## <a name="arraydifference_type"></a><a name="difference_type"></a>배열::d ifference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a>배열::difference_type
 
 두 요소 사이의 부호가 있는 거리의 형식입니다.
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arraypointer"></a><a name="pointer"></a>배열::p
+## <a name="arraypointer"></a><a name="pointer"></a>배열::pointer
 
 요소에 대한 포인터의 형식입니다.
 
