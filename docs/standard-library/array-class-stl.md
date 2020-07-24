@@ -130,34 +130,34 @@ class array;
 |[const_reference](#const_reference)|요소에 대한 상수 참조의 형식입니다.|
 |[const_reverse_iterator](#const_reverse_iterator)|제어되는 시퀀스에 대한 상수 역방향 반복기의 형식입니다.|
 |[difference_type](#difference_type)|두 요소 사이의 부호가 있는 거리의 형식입니다.|
-|[반복](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|
+|[반복(iterator)](#iterator)|제어되는 시퀀스에 대한 반복기의 형식입니다.|
 |[포인터(pointer)](#pointer)|요소에 대한 포인터의 형식입니다.|
-|[참조일](#reference)|요소에 대한 참조의 형식입니다.|
+|[참조(reference)](#reference)|요소에 대한 참조의 형식입니다.|
 |[reverse_iterator](#reverse_iterator)|제어되는 시퀀스에 대한 반대 반복기의 형식입니다.|
 |[size_type](#size_type)|두 요소 사이의 부호가 없는 거리의 형식입니다.|
 |[value_type](#value_type)|요소의 형식입니다.|
 
 |멤버 함수|설명|
 |-|-|
-|[배열과](#array)|배열 개체를 생성합니다.|
+|[array](#array)|배열 개체를 생성합니다.|
 |[assign](#assign)|않게. 를 `fill`사용 합니다.) 모든 요소를 바꿉니다.|
 |[at](#at)|지정된 위치에 있는 요소에 액세스합니다.|
-|[뒤로](#back)|마지막 요소에 액세스합니다.|
-|[시작](#begin)|제어되는 시퀀스의 시작을 지정합니다.|
+|[back](#back)|마지막 요소에 액세스합니다.|
+|[begin](#begin)|제어되는 시퀀스의 시작을 지정합니다.|
 |[cbegin](#cbegin)|배열의 첫 번째 요소에 대한 임의 액세스 const 반복기를 반환합니다.|
 |[cend](#cend)|배열 끝의 바로 다음을 가리키는 임의 액세스 const 반복기를 반환합니다.|
 |[crbegin](#crbegin)|역방향 배열의 첫 번째 요소에 대해 const 반복기를 반환합니다.|
 |[crend](#crend)|역방향 배열 끝에 대해 const 반복기를 반환합니다.|
-|[데이터](#data)|첫 번째 요소의 주소를 가져옵니다.|
-|[비우려면](#empty)|요소가 있는지 테스트합니다.|
+|[data](#data)|첫 번째 요소의 주소를 가져옵니다.|
+|[empty](#empty)|요소가 있는지 테스트합니다.|
 |[end](#end)|제어되는 시퀀스의 끝을 지정합니다.|
-|[칠할](#fill)|지정된 값을 가진 모든 요소를 바꿉니다.|
-|[앞뒤](#front)|첫 번째 요소에 액세스합니다.|
+|[fill](#fill)|지정된 값을 가진 모든 요소를 바꿉니다.|
+|[frong](#front)|첫 번째 요소에 액세스합니다.|
 |[max_size](#max_size)|요소 수를 계산합니다.|
 |[rbegin](#rbegin)|제어되는 역방향 시퀀스의 시작을 지정합니다.|
 |[rend](#rend)|제어되는 역방향 시퀀스의 끝을 지정합니다.|
 |[size](#size)|요소 수를 계산합니다.|
-|[스왑을](#swap)|두 컨테이너의 내용을 바꿉니다.|
+|[swap](#swap)|두 컨테이너의 내용을 바꿉니다.|
 
 |연산자|설명|
 |-|-|
