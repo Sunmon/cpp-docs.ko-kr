@@ -96,7 +96,7 @@ ms.locfileid: "79427592"
 ---
 # <a name="vector-class"></a>vector 클래스
 
-C++ 표준 라이브러리 벡터 클래스는 시퀀스 컨테이너의 클래스 템플릿입니다. 벡터는 선형 정렬에서 지정 된 형식의 요소를 저장 하 고 모든 요소에 대 한 빠른 임의 액세스를 허용 합니다. 벡터는 임의 액세스 성능이 프리미엄 인 경우 시퀀스에 대 한 기본 컨테이너입니다.
+C++ 표준 라이브러리 벡터 클래스는 시퀀스 컨테이너의 클래스 템플릿입니다. 벡터는 선형 정렬에서 지정된 형식의 요소를 저장하고 모든 요소에 대 한 빠른 임의 액세스를 허용합니다. 벡터는 임의 액세스 성능이 프리미엄인 경우 시퀀스에 대한 기본 컨테이너입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -119,7 +119,7 @@ class vector
 
 멤버 함수가 벡터 개체에 포함되는 시퀀스를 현재 스토리지 용량보다 더 크게 늘려야 할 때 벡터 다시 할당이 수행됩니다. 다른 삽입 및 지우기에서 시퀀스 내의 여러 스토리지 주소가 변경될 수 있습니다. 이러한 모든 경우 시퀀스의 변경되는 부분을 가리키는 반복기 또는 참조가 올바르지 않은 상태가 됩니다. 재할당이 수행되지 않으면 삽입/삭제 지점 앞의 반복기와 참조만 올바른 상태로 유지됩니다.
 
-[Vector\<bool > 클래스](../standard-library/vector-bool-class.md) 는 `bool`형식의 요소에 대 한 클래스 템플릿 벡터의 전체 특수화입니다. 특수화에 사용 되는 기본 형식에 대 한 할당자를 포함 합니다.
+[Vector\<bool > 클래스](../standard-library/vector-bool-class.md) 는 `bool`형식의 요소에 대한 클래스 템플릿 벡터의 전체 특수화입니다. 특수화에 사용 되는 기본 형식에 대 한 할당자를 포함 합니다.
 
 [Vector\<bool > reference 클래스](../standard-library/vector-bool-class.md#reference_class) 는 개체가 vector\<bool > 개체 내의 요소 (단일 비트)에 대 한 참조를 제공할 수 있는 중첩 클래스입니다.
 
@@ -138,7 +138,7 @@ class vector
 |[allocator_type](#allocator_type)|벡터 개체의 `allocator` 클래스를 나타내는 형식입니다.|
 |[const_iterator](#const_iterator)|벡터에 있는 **const** 요소를 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.|
 |[const_pointer](#const_pointer)|벡터의 **const** 요소에 대한 포인터를 제공하는 형식입니다.|
-|[const_reference](#const_reference)|벡터에 저장 된 **const** 요소에 대 한 참조를 제공 하는 형식입니다. **Const** 작업을 읽고 수행 하는 데 사용 됩니다.|
+|[const_reference](#const_reference)|벡터에 저장 된 **const** 요소에 대 한 참조를 제공하는 형식입니다. **Const** 작업을 읽고 수행 하는 데 사용 됩니다.|
 |[const_reverse_iterator](#const_reverse_iterator)|벡터의 모든 **const** 요소를 읽을 수 있는 임의 액세스 반복기를 제공하는 형식입니다.|
 |[difference_type](#difference_type)|벡터 내 두 요소 주소 간의 차이를 제공하는 형식입니다.|
 |[iterator](#iterator)|벡터에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다.|
@@ -489,7 +489,7 @@ The length of storage allocated is now 2.
 
 ## <a name="cbegin"></a>cbegin
 
-범위의 첫 번째 요소를 주소 처리 하는 **const** 반복기를 반환 합니다.
+범위의 첫 번째 요소를 주소 처리 하는 **const** 반복기를 반환합니다.
 
 ```cpp
 const_iterator cbegin() const;
@@ -503,7 +503,7 @@ const_iterator cbegin() const;
 
 `cbegin`의 반환 값을 사용 하 여 범위의 요소를 수정할 수 없습니다.
 
-`begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `begin()` 및 `cbegin()`를 지 원하는 모든 종류의 수정 가능 (비 **const**) 컨테이너로 `Container` 하는 것이 좋습니다.
+`begin()` 멤버 함수 대신 이 멤버 함수를 사용하여 반환 값이 `const_iterator`임을 보장할 수 있습니다. 일반적으로 다음 예제와 같이 [auto](../cpp/auto-cpp.md) 형식 추론 키워드와 함께 사용합니다. 이 예제에서는 `begin()` 및 `cbegin()`를 지원하는 모든 종류의 수정 가능 (비 **const**) 컨테이너로 `Container` 하는 것이 좋습니다.
 
 ```cpp
 auto i1 = Container.begin();
@@ -539,7 +539,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-`cend`에서 반환 된 값은 역참조 되지 않아야 합니다. 비교에만 사용 합니다.
+`cend`에서 반환 된 값은 역참조 되지 않아야 합니다. 비교에만 사용합니다.
 
 ## <a name="clear"></a>해제
 
@@ -587,7 +587,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>설명
 
-`const_iterator` 형식은 요소의 값을 수정 하는 데 사용할 수 없습니다.
+`const_iterator` 형식은 요소의 값을 수정하는 데 사용할 수 없습니다.
 
 ### <a name="example"></a>예제
 
@@ -603,13 +603,13 @@ typedef typename Allocator::const_pointer const_pointer;
 
 ### <a name="remarks"></a>설명
 
-`const_pointer` 형식은 요소의 값을 수정 하는 데 사용할 수 없습니다.
+`const_pointer` 형식은 요소의 값을 수정하는 데 사용할 수 없습니다.
 
 [iterator](#iterator)는 벡터 요소에 액세스하는 데 사용되는 경우가 더 많습니다.
 
 ## <a name="const_reference"></a>const_reference
 
-벡터에 저장 된 **const** 요소에 대 한 참조를 제공 하는 형식입니다. **Const** 작업을 읽고 수행 하는 데 사용 됩니다.
+벡터에 저장 된 **const** 요소에 대 한 참조를 제공하는 형식입니다. **Const** 작업을 읽고 수행 하는 데 사용 됩니다.
 
 ```cpp
 typedef typename Allocator::const_reference const_reference;
@@ -736,7 +736,7 @@ const_reverse_iterator crend() const;
 
 `crend`를 사용하여 역방향 반복기가 `vector` 끝에 도달했는지 여부를 테스트할 수 있습니다.
 
-`crend`에서 반환 된 값은 역참조 되지 않아야 합니다. 비교에만 사용 합니다.
+`crend`에서 반환 된 값은 역참조 되지 않아야 합니다. 비교에만 사용합니다.
 
 ### <a name="example"></a>예제
 
@@ -1676,7 +1676,7 @@ reverse_iterator rend();
 
 `rend`를 사용하여 역방향 반복기가 벡터 끝에 도달했는지를 테스트할 수 있습니다.
 
-`rend`에서 반환 된 값은 역참조 되지 않아야 합니다. 비교에만 사용 합니다.
+`rend`에서 반환 된 값은 역참조 되지 않아야 합니다. 비교에만 사용합니다.
 
 ### <a name="example"></a>예제
 
@@ -2000,7 +2000,7 @@ friend void swap(
 ### <a name="parameters"></a>매개 변수
 
 *오른쪽*\
-교환할 요소를 제공 하는 벡터입니다. 또는 요소가 *왼쪽*벡터의 요소와 교환 되는 벡터입니다.
+교환할 요소를 제공하는 벡터입니다. 또는 요소가 *왼쪽*벡터의 요소와 교환 되는 벡터입니다.
 
 *왼쪽*\
 해당 요소를 벡터 *오른쪽*의 요소와 교환할 벡터입니다.
